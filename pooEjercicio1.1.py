@@ -1,4 +1,4 @@
-class Estudiante:
+class persona:
     def __init__(self, nombre, edad, grado):
         self.nombre = nombre
         self.edad = edad
@@ -11,17 +11,22 @@ nombre = input("Ingrese por favor su nombre: ")
 edad = input("Ingrese por favor su edad: ")
 grado = input("Por favor, ingrese su grado: ")
 
-Estudiante = Estudiante(nombre, edad, grado)
+Estudiante = persona(nombre, edad, grado)
 
 print(f"""
 DATOS DEL ESTUDIANTE
-
 Nombre: {Estudiante.nombre}
 Edad: {Estudiante.edad}
 Grado: {Estudiante.grado}
 """)
 
 while True:
-    estudiar = input()
+    estudiar = input("Ingrese 'estudiar' para que el estudiante estudie: ")
     if estudiar.lower() == "estudiar":
         Estudiante.estudiar()
+    else:
+        print("Comando no reconocido. Intente nuevamente.")
+
+    break
+
+    
