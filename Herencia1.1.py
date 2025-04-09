@@ -12,7 +12,6 @@ class Artista:
         self.habilidad = habilidad
     
     def mostrar_habilidad(self):
-        # Se asume que self.nombre existe si se hereda junto con persona
         print(f"{self.nombre} es un artista y su habilidad es {self.habilidad}.")
 
 class empleadoArtista(persona, Artista):
@@ -25,7 +24,7 @@ class empleadoArtista(persona, Artista):
     def present(self):
         return f"{self.nombre} trabaja en {self.empresa} como artista y gana {self.salario}."
     
-roberto = empleadoArtista("Roberto", 30, "Mexicano", "cantar", 50000, "Programador")
+roberto = empleadoArtista("Luis", 19, "Colombino", "cantar", 50000, "Programador")
 roberto.hablar()
 roberto.mostrar_habilidad()
 print(roberto.present())
